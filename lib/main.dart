@@ -6,8 +6,11 @@ import 'screens/add_product_screen.dart';
 import 'screens/edit_product_screen.dart';
 import 'screens/view_product_screen.dart';
 import 'screens/signup_page.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
